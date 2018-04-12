@@ -27,14 +27,14 @@ function refreshStatus(callback) {
 					} else {
 						chrome.browserAction.setIcon({
 							path: {
-								"19" : "img/icon.restore.19.png",
-								"38" : "img/icon.restore.38.png"
+								"19" : "img/restore.19.png",
+								"38" : "img/restore.38.png"
 							}
 						});
 					}
 					if(localStorage["pwdProtect"] == "true") {
 						chrome.browserAction.setPopup({
-							popup:	"popup.htm"
+							popup:	"popup.html"
 						})
 					} else {
 						chrome.browserAction.setPopup({
@@ -67,16 +67,16 @@ function refreshStatus(callback) {
 				status = "empty";
 				chrome.browserAction.setIcon({
 					path: {
-						"19" : "img/icon.options.19.png",
-						"38" : "img/icon.options.38.png"
+						"19" : "img/options.19.png",
+						"38" : "img/options.38.png"
 					}
 				});
 			} else {
 				status = "panic";
 				chrome.browserAction.setIcon({
 					path: {
-						"19" : "img/icon.19.png",
-						"38" : "img/icon.38.png"
+						"19" : "img/19.png",
+						"38" : "img/38.png"
 					}
 				});
 			}
@@ -110,8 +110,8 @@ function action() {
 	ACTION_IN_PROGRESS = true;
 	chrome.browserAction.setIcon({
 		path: {
-			"19" : "img/icon.options.19.png",
-			"38" : "img/icon.options.38.png"
+			"19" : "img/options.19.png",
+			"38" : "img/options.38.png"
 		}
 	});
 	Animation.animateFlip();
@@ -121,11 +121,11 @@ function action() {
 				//if(tab.url == "chrome://newtab/" || safePages.matches(tab.url)) {
 				if(false) {
 					chrome.tabs.update(tab.id, {
-						url:	"options.htm"
+						url:	"options.html"
 					});
 				} else {
 					chrome.tabs.create({
-						url:	"options.htm"
+						url:	"options.html"
 					});
 				}
 				
@@ -188,7 +188,7 @@ function action() {
 		case "panic":
 			if(localStorage["pwdProtect"] == "true") {
 				chrome.browserAction.setPopup({
-					popup:	"popup.htm"
+					popup:	"popup.html"
 				})
 			}
 			
@@ -296,7 +296,6 @@ chrome.windows.onFocusChanged.addListener(function(tabId){if(tabId>-1) refreshSt
 const WHITELIST = [
 	chrome.app.getDetails().id,
 	"nlbgcjdlgkhnnkcfijfbdplpbbonnelf"
-	//"jfaaehckaifphnkecfmlpdcekcnkiaij"
 ];
 
 var CALLBACKS = [];

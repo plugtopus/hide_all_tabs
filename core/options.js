@@ -8,11 +8,11 @@ var I18n = chrome.i18n,
 function hydrateControls(is_reset) {
   var el, shortcut2 = $('#shortcut2');
   if (!is_reset) {
-    for (let key = 65; key < 91; key++) {
+    for (var key = 65; key < 91; key++) {
       shortcut2.append('<option value=' + key + '>' + String.fromCharCode(key));
     }
   }
-  for (let id in Config) {
+  for (var id in Config) {
     el = document.getElementById(id);
     switch(Config[id].option) {
       case 'form' :
@@ -71,7 +71,7 @@ function addSafePage(cfg_obj, index) {
     if (SafePages.o.length == 1) {
        $('.select-holder .remove').show();
     }
-    let safe_page_def_obj = JSON.parse(Config.safePage.value)[0];
+    var safe_page_def_obj = JSON.parse(Config.safePage.value)[0];
     $select
       .val(MainDom.urlIndex(safe_page_def_obj.url))
       .data('index', SafePages.o.length);
@@ -115,7 +115,7 @@ function checkControlDependancies(el) {
 }
 
 function resetOptions(defaults) {
-  for (let i in localStorage) {
+  for (var i in localStorage) {
     localStorage.removeItem(i);
   }
   localStorage.configured = false;
