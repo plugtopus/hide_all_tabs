@@ -1173,8 +1173,8 @@ table {
 }
 
 .proxy #footer {
-	font-size: 12px;
-}
+	 font-size: 12px;
+ }
 
 .proxy #footer .footer-logo {
 	margin: 0 auto 27px;
@@ -1218,59 +1218,6 @@ table {
 .proxy .form-section .radio-list label {
 	color: #555;
 	width: 140px;
-}
-
-/* footer styles */
-
-#footer {
-	position: relative;
-	z-index: 1;
-	text-align: center;
-	padding: 67px 10px 40px;
-	font-size: 14px;
-	line-height: 18px;
-	color: #888;
-}
-
-#footer p a {
-	color: #888;
-}
-
-#footer p a:hover {
-	text-decoration: none;
-	color: #fff;
-}
-
-#footer:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: -9999px;
-	right: -9999px;
-	background: #333338;
-	z-index: -1;
-}
-
-#footer .logo {
-	width: 130px;
-	margin: 0 auto 30px;
-}
-
-#footer .logo a {
-	display: block;
-}
-
-#footer .logo img {
-	margin: 0 0 18px;
-}
-
-#footer .logo {
-	width: 130px;
-	height: 33px;
-	display: block;
-	overflow: hidden;
-	text-indent: -9999px;
 }
 
 /* ---------------------------------------------------------
