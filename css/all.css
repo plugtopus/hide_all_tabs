@@ -275,43 +275,6 @@ table {
 
 /* header styles */
 
-#header {
-	width: 100%;
-	position: relative;
-	z-index: 1;
-	padding: 69px 20px 68px 117px;
-	color: #fff;
-	font-size: 18px;
-	line-height: 22px; /* page logo styles */
-}
-
-#header:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: -9999px;
-	right: -9999px;
-	bottom: 0;
-	z-index: -1;
-	background: #00adad;
-}
-
-#header .logo {
-	width: 292px;
-	float: left;
-}
-
-#header .logo img {
-	display: block;
-}
-
-#header .text-holder {
-	float: right;
-	width: 504px;
-	padding: 41px 0 0;
-	padding: 41px 0 23px;
-}
-
 #header h1 {
 	font-size: 24px;
 	line-height: 28px;
